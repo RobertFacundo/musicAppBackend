@@ -10,6 +10,8 @@ export const authMiddleware = (
     try {
         const authHeader = req.headers.authorization;
 
+        console.log(authHeader)
+
         if (!authHeader) {
             throw new AppError('Missing authorization header', 401);
         }
