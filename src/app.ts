@@ -1,6 +1,6 @@
 import express from 'express';
 import authRoutes from './features/auth/auth.routes';
-import musicRoutes from './features/music/music.routes'
+import musicRoutes from './features/music/routes/music.routes'
 import { errorMiddleware } from './shared/middlewares/error.middleware';
 import cors from 'cors'
 

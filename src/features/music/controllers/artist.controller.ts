@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
-import { MusicService } from "./artist.service";
-import { AppError } from "../../shared/errors/AppError";
+import { MusicService } from "../services/artist.service";
+import { AppError } from "../../../shared/errors/AppError";
 
 const musicService = new MusicService();
 

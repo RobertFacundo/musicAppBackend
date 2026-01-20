@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
-import { musicProviderService } from './music.service';
-import { AppError } from '../../shared/errors/AppError';
+import { musicProviderService } from '../services/music.service';
+import { AppError } from '../../../shared/errors/AppError';
 
 class MusicController {
     async getHomeArtists(req: Request, res: Response, next: NextFunction) {
