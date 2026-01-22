@@ -33,4 +33,17 @@ export class MusicService {
             }))
         };
     }
+
+    async getArtistAlbums(artistId: string) {
+        const res = await axios.get(`${DEEZER_API_BASE}/artist/${artistId}/albums`);
+        const albums = res.data.data;
+
+        return albums.map((album: any) => ({
+            id: album.id,
+            title: album.title,
+            image: album.cover_medium,
+            releaseDate: album.release_date,
+            recordType: album.record_type
+        }))
+    }
 }

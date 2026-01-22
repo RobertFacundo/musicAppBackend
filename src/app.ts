@@ -1,6 +1,7 @@
 import express from 'express';
 import authRoutes from './features/auth/auth.routes';
-import musicRoutes from './features/music/routes/music.routes'
+import musicRoutes from './features/music/routes/music.routes';
+import playerRoutes from './features/player/player.routes';
 import { errorMiddleware } from './shared/middlewares/error.middleware';
 import cors from 'cors'
 
@@ -23,6 +24,7 @@ app.get('/health', (_req, res) => {
 
 app.use('/auth', authRoutes);
 app.use('/api/music', musicRoutes);
+app.use('/api/player', playerRoutes);
 app.use(errorMiddleware)
 
 export default app;

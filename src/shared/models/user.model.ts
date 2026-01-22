@@ -2,6 +2,14 @@ import { Schema, model, Document } from 'mongoose';
 
 export type UserRole = 'USER' | 'ADMIN';
 
+export interface HistoryItem {
+    type: 'track' | 'artist' | 'album';
+    deezerId: string;
+    title: string;
+    image?: string;
+    createdAt: Date;
+}
+
 export interface IUser extends Document {
     username: string
     email: string
@@ -11,11 +19,37 @@ export interface IUser extends Document {
     isPremium: boolean
 
     favorites: string[]
-    history: string[]
+    history: HistoryItem[]
 
     createdAt: Date
     updatedAt: Date
 }
+
+const HistorySchema = new Schema<HistoryItem>(
+    {
+        type: {
+            type: String,
+            enum: ['track', 'artist', 'album'],
+            required: true,
+        },
+        deezerId: {
+            type: String,
+            required: true,
+        },
+        title: {
+            type: String,
+            required: true,
+        },
+        image: {
+            type: String,
+        },
+        createdAt: {
+            type: Date,
+            default: Date.now,
+        },
+    },
+    { _id: false }
+);
 
 const UserSchema = new Schema<IUser>(
     {
@@ -48,8 +82,8 @@ const UserSchema = new Schema<IUser>(
             default: [],
         },
         history: {
-            type: [String],
-            default: [],
+            type: [HistorySchema],
+            default:[]
         },
     },
     {

@@ -21,3 +21,18 @@ export const getArtist = async (req: Request, res: Response, next: NextFunction)
         )
     }
 }
+
+export const getArtistAlbums = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const { id } = req.params;
+
+        if (!id) {
+            return res.status(400).json({ message: 'Artist id is required' });
+        }
+
+        const albums = await musicService.getArtistAlbums(id);
+        res.json(albums);
+    } catch (error) {
+        next(new AppError('failed to get artist albums', 502));
+    }
+};
