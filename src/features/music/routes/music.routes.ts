@@ -5,6 +5,7 @@ import { getPlaylist } from "../controllers/playlist.controller";
 import { getArtistsByGenreController } from "../controllers/genre.controller";
 import { getTrack } from "../controllers/track.controller";
 import { getAlbum } from "../controllers/album.controller";
+import { searchController } from "../controllers/search.controller";
 
 const router = Router();
 
@@ -22,5 +23,7 @@ router.get('/:genreId/artists', getArtistsByGenreController);
 router.get('/track/:id', getTrack);
 
 router.get('/album/:id', getAlbum)
+
+router.get('/search', searchController.search)
 
 export default router;  
