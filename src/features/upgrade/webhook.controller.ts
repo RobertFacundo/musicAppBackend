@@ -30,9 +30,10 @@ export const webhook = async (req: Request, res: Response) => {
                 paymentStatus: session.payment_status,
             });
 
-            const updatedUser = await UserModel.findByIdAndUpdate(userId, {
-                isPremium: true,
-            });
+            const updatedUser = await UserModel.findByIdAndUpdate(userId,
+                { isPremium: true },
+                { new: true, runValidators: true }
+            );
 
             console.log('Updated user:', updatedUser);
         }
