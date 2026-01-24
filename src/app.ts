@@ -18,7 +18,7 @@ app.use(
     })
 )
 
-app.use('/api/upgrade', webhookRoutes)
+app.use('/api/upgrade/webhook', webhookRoutes)
 
 app.use(express.json());
 
