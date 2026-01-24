@@ -32,7 +32,7 @@ export const webhook = async (req: Request, res: Response) => {
 
             const updatedUser = await UserModel.findByIdAndUpdate(userId,
                 { isPremium: true },
-                { new: true, runValidators: true }
+                { new: true, runValidators:true}
             );
 
             console.log('Updated user:', updatedUser);

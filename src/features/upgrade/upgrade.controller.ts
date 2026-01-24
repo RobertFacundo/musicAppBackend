@@ -25,6 +25,8 @@ export const getSessionController = async (req: Request, res: Response, next: Ne
     const sessionId = req.params.sessionId;
     const session = await stripe.checkout.sessions.retrieve(sessionId);
 
+    console.log(session,'log del getsession controller')
+
     // Devolver solo lo que te interesa
     return res.json({
       payment_status: session.payment_status,
