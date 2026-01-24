@@ -16,7 +16,7 @@ export const createCheckoutSession = async (userId: string) => {
                 quantity: 1,
             },
         ],
-        success_url: 'https://music-app-f.vercel.app/checkout/success',
+        success_url: `https://music-app-f.vercel.app/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: 'https://music-app-f.vercel.app/upgrade',
         metadata: {
             userId
