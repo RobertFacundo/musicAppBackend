@@ -2,6 +2,7 @@ import { Request, Response, NextFunction } from 'express';
 import * as UpgradeService from './upgrade.service';
 import { AppError } from '../../shared/errors/AppError';
 import { stripe } from '../../shared/config/stripe';
+import { UserModel } from '../../shared/models/user.model';
 
 export const createChekoutSessionController = async (
     req: Request,
