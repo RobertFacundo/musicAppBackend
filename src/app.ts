@@ -1,4 +1,5 @@
 import express from 'express';
+import path from 'path';
 import authRoutes from './features/auth/auth.routes';
 import musicRoutes from './features/music/routes/music.routes';
 import playerRoutes from './features/player/player.routes';
@@ -32,5 +33,9 @@ app.use('/api/player', playerRoutes);
 app.use('/api/upgrade',upgradeRoutes);
 
 app.use(errorMiddleware)
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(process.cwd(), 'public', 'index.html'));
+})
 
 export default app;
