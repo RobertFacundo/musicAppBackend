@@ -19,8 +19,12 @@ app.use(
     })
 )
 
-app.use('/api/upgrade/webhook', webhookRoutes)
+app.use(
+  '/images',
+  express.static(path.join(process.cwd(), 'data', 'images'))
+);
 
+app.use('/api/upgrade/webhook', webhookRoutes)
 app.use(express.json());
 
 app.get('/health', (_req, res) => {
@@ -32,10 +36,10 @@ app.use('/api/music', musicRoutes);
 app.use('/api/player', playerRoutes);
 app.use('/api/upgrade',upgradeRoutes);
 
-app.use(errorMiddleware)
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(process.cwd(), 'data', 'index.html'));
+app.get('/', (_req, res) => {
+    res.sendFile(path.join(process.cwd(), 'public', 'index.html'));
 })
+
+app.use(errorMiddleware)
 
 export default app;
