@@ -35,7 +35,7 @@ app.use('/api/upgrade',upgradeRoutes);
 app.use(errorMiddleware)
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(process.cwd(), 'public', 'index.html'));
+    res.sendFile(path.join(process.cwd(), 'data', 'index.html'));
 })
 
 export default app;

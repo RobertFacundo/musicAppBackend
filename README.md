@@ -10,7 +10,7 @@ The backend is built with **Node.js + Express**, follows a **feature-based archi
 ## 🌐 Live API
 
 **Backend URL:**  
-https://<your-backend>.onrender.com
+[https://<your-backend>.onrender.com](https://musicappbackend-ccph.onrender.com/)
 
 > ⚠️ This backend is hosted on Render (Free plan).  
 > Cold starts may take a few seconds on the first request.
@@ -185,3 +185,18 @@ Since **Render Free tier** puts services to sleep:
 *   Informs users about cold starts
     
 *   Redirects safely to the frontend once the backend wakes up
+  
+----
+
+## 📬 Contact
+
+**Facundo Robert**  
+Frontend / Full Stack Developer  
+
+- 💼 LinkedIn: [Facundo Robert](https://www.linkedin.com/in/robertfacundodev/) 
+- 💻 Portfolio: [My Portfolio](https://facundorobert.vercel.app/)   
+- 📧 Email: robertf.coder@gmail.com 
+
+---
+
+⭐ If you like this project or found it useful, feel free to star the repo!
