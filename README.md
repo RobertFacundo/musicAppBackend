@@ -10,7 +10,7 @@ The backend is built with **Node.js + Express**, follows a **feature-based archi
 ## 🌐 Live API
 
 **Backend URL:**  
-[https://<your-backend>.onrender.com](https://musicappbackend-ccph.onrender.com/)
+[Deployed Render Backend](https://musicappbackend-ccph.onrender.com/)
 
 > ⚠️ This backend is hosted on Render (Free plan).  
 > Cold starts may take a few seconds on the first request.
