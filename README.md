@@ -3,8 +3,9 @@
 Backend REST API for a full-stack music streaming application.  
 This service handles authentication, music data orchestration, user interactions (favorites & history), and a **Premium subscription flow powered by Stripe**.
 
-The backend is built with **Node.js + Express**, follows a **feature-based architecture**, and is deployed on **Render (Free tier)**.
+This project was designed as a **portfolio-grade application**, prioritizing scalability, maintainability, and real production patterns.
 
+Developed over **~40 hours** of focused, tracked work, covering architecture, authentication, API integrations, payments, and deployment.
 ---
 
 ## 🌐 Live API
@@ -173,6 +174,11 @@ These endpoints are consumed by the frontend to build:
 *   Environment-based configuration
     
 *   Ready for scaling or feature expansion
+  
+## ⏲️ Time Tracking
+
+- Total tracked development time: **39h 57m**
+- Sessions logged individually across architecture, frontend, backend, and integrations
     
 
 🧊 Cold Start Handling
